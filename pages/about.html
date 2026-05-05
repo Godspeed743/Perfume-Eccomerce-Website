@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>About - Mohammad Al Qamar Perfumes</title>
+    <meta name="description"
+        content="Discover the story behind Al Qamar Perfumes - luxury Arabian fragrances inspired by lunar mystique and desert oasis beauty.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <script src="../js/theme.js"></script>
+    <link rel="preload" href="../perfume images/logo image.jpg" as="image" type="image/jpeg">
+    <link rel="dns-prefetch" href=".">
+    <style>
+    :root {
+      --accent-color: #D4AF37;
+      --accent-hover: #f6c343;
+      --header-bg: rgba(10,10,26,0.98);
+      --footer-bg: #0a0a1a;
+      --text-primary: #ffffff;
+      --text-secondary: #b8b8cc;
+    }
+    [data-theme="dark"] {
+      --accent-color: #D4AF37;
+      --accent-hover: #f6c343;
+    }
+    </style>
+    <style>
+        /* Force about hero heading + description visible on initial load - prevents glitch */
+        .about-hero h1,
+        .about-hero h2,
+        .about-hero .text-center p,
+        .about-hero .theme-text-secondary {
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            animation: none !important;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen font-['Poppins']" style="font-smooth: always; -webkit-font-smoothing: antialiased;">
+    <!-- Top Marquee -->
+    <div class="marquee-container">
+        <div class="marquee-text">🚚 FREE DELIVERY ON ALL ORDERS 🚚 FREE DELIVERY ON ALL ORDERS 🚚 FREE DELIVERY ON ALL ORDERS 🚚 FREE DELIVERY ON ALL ORDERS 🚚 FREE DELIVERY ON ALL ORDERS</div>
+    </div>
+
+    <!-- Mobile Header (320px-768px) -->
+    <header class="mobile-header site-header" aria-label="Mobile header">
+        <div class="mobile-header-left">
+            <img src="../perfume images/logo image.jpg" alt="Mohammad Al Qamar Perfumes logo" class="mobile-logo" loading="eager" decoding="async">
+            <span class="mobile-brand">Mohammad Al Qamar Perfumes</span>
+        </div>
+
+        <div class="mobile-header-right">
+            <button id="cart-btn" class="mobile-cart-btn" aria-label="View cart" type="button">
+                <span class="text-2xl" aria-hidden="true">🛒</span>
+                <span id="cart-count" class="cart-badge">0</span>
+            </button>
+            <button class="mobile-menu-toggle hamburger" aria-label="Open menu" aria-controls="mobile-menu-overlay" aria-expanded="false" type="button">
+                <span class="hamburger-lines" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                </span>
+            </button>
+        </div>
+    </header>
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <nav class="mobile-menu" aria-label="Mobile navigation">
+            <a href="../index.html" data-nav="home">Home</a>
+            <a href="shop.html" data-nav="shop">Shop</a>
+            <a href="about.html" data-nav="about">About Us</a>
+            <a href="contact.html" data-nav="contact">Contact</a>
+            <a href="policies.html" data-nav="policies">Policies</a>
+            <div class="mobile-social-row" aria-label="Social links">
+                <div class="header-social-icons">
+                    <a href="https://wa.me/918097817540" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="WhatsApp chat">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M20.52 3.48A11.84 11.84 0 0 0 12.04 0C5.4 0 .16 5.24.16 11.88c0 2.1.56 4.14 1.62 5.95L0 24l6.33-1.78a11.9 11.9 0 0 0 5.7 1.47h.01c6.64 0 11.88-5.24 11.88-11.88 0-3.18-1.24-6.17-3.5-8.33zM12.04 21.3c-1.85 0-3.66-.5-5.24-1.45l-.38-.23-3.76 1 1.02-3.66-.24-.38a9.4 9.4 0 0 1-1.5-5.1c0-5.19 4.22-9.4 9.4-9.4 2.52 0 4.88.98 6.66 2.76a9.35 9.35 0 0 1 2.76 6.64c0 5.18-4.22 9.4-9.4 9.4zm4.85-7.48c-.26-.13-1.57-.77-1.81-.85-.24-.09-.42-.13-.6.13-.18.26-.69.85-.85 1.02-.16.18-.31.19-.57.06-.26-.13-1.09-.4-2.08-1.27-.77-.68-1.3-1.51-1.45-1.77-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.47.13-.16.17-.28.26-.47.08-.18.04-.34-.02-.47-.06-.13-.6-1.45-.83-1.99-.22-.53-.44-.46-.6-.47l-.51-.01c-.18 0-.47.07-.72.32-.25.25-.95.93-.95 2.27s.98 2.63 1.12 2.81c.14.18 1.93 2.95 4.68 4.14.65.28 1.15.45 1.54.58.65.21 1.24.18 1.71.11.52-.08 1.57-.64 1.8-1.25.22-.61.22-1.13.15-1.24-.07-.11-.24-.18-.5-.3z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/mq.perfumes" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.2" stroke="currentColor" stroke-width="1.7"></rect>
+                            <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"></circle>
+                            <circle cx="17.35" cy="6.65" r="1.05" fill="currentColor"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@mqperfumes" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.8 15.6V8.4L15.8 12l-6 3.6z"/>
+                        </svg>
+                    </a>
+                    <a href="tel:+918097817540" class="header-social-icon" aria-label="Call us">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M6.6 2.2 4.3 4.5c-.8.8-1 2-.6 3 1.8 4.4 5.3 7.8 9.7 9.7 1 .4 2.2.2 3-.6l2.3-2.3a1.5 1.5 0 0 0 0-2.1l-2.3-2.3a1.5 1.5 0 0 0-2.1 0l-.9.9a.9.9 0 0 1-1 .2 9.4 9.4 0 0 1-3.7-3.7.9.9 0 0 1 .2-1l.9-.9a1.5 1.5 0 0 0 0-2.1L8.7 2.2a1.5 1.5 0 0 0-2.1 0z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header" id="mainHeader">
+        <style>
+            .site-header .nav-link {
+                color: var(--text-primary);
+                font-weight: 500;
+                transition: color 0.2s ease, opacity 0.2s ease;
+                opacity: 0.92;
+            }
+
+            .site-header .nav-link:hover {
+                color: var(--accent-color);
+                opacity: 1;
+            }
+
+            .site-header .nav-link.active {
+                color: var(--accent-color);
+                opacity: 1;
+                font-weight: 600;
+            }
+        </style>
+
+        <div class="mx-auto max-w-[1400px] px-[5%] py-3">
+            <div class="flex items-center gap-6">
+                <a class="site-logo flex items-center gap-3 shrink-0" href="../index.html" aria-label="Mohammad Al Qamar Perfumes home">
+                    <img src="../perfume images/logo image.jpg" alt="Mohammad Al Qamar Perfumes"
+                        class="header-logo w-12 h-12 object-contain rounded-full cursor-pointer"
+                        loading="eager" decoding="async"
+                        style="border: 2px solid var(--accent-color);">
+                    <span class="header-title text-lg font-bold tracking-wide">Mohammad Al Qamar Perfumes</span>
+                </a>
+
+                <nav class="hidden md:flex items-center gap-8 flex-1">
+                    <a href="../index.html" class="nav-link home" aria-current="page">Home</a>
+                    <a href="shop.html" class="nav-link shop">Shop</a>
+                    <a href="about.html" class="nav-link about active">About</a>
+                    <a href="contact.html" class="nav-link contact">Contact</a>
+                    <a href="policies.html" class="nav-link policies">Policies</a>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="hidden md:flex header-social-icons" aria-label="Social links">
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/918097817540" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="WhatsApp chat">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M20.52 3.48A11.84 11.84 0 0 0 12.04 0C5.4 0 .16 5.24.16 11.88c0 2.1.56 4.14 1.62 5.95L0 24l6.33-1.78a11.9 11.9 0 0 0 5.7 1.47h.01c6.64 0 11.88-5.24 11.88-11.88 0-3.18-1.24-6.17-3.5-8.33zM12.04 21.3c-1.85 0-3.66-.5-5.24-1.45l-.38-.23-3.76 1 1.02-3.66-.24-.38a9.4 9.4 0 0 1-1.5-5.1c0-5.19 4.22-9.4 9.4-9.4 2.52 0 4.88.98 6.66 2.76a9.35 9.35 0 0 1 2.76 6.64c0 5.18-4.22 9.4-9.4 9.4zm4.85-7.48c-.26-.13-1.57-.77-1.81-.85-.24-.09-.42-.13-.6.13-.18.26-.69.85-.85 1.02-.16.18-.31.19-.57.06-.26-.13-1.09-.4-2.08-1.27-.77-.68-1.3-1.51-1.45-1.77-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.47.13-.16.17-.28.26-.47.08-.18.04-.34-.02-.47-.06-.13-.6-1.45-.83-1.99-.22-.53-.44-.46-.6-.47l-.51-.01c-.18 0-.47.07-.72.32-.25.25-.95.93-.95 2.27s.98 2.63 1.12 2.81c.14.18 1.93 2.95 4.68 4.14.65.28 1.15.45 1.54.58.65.21 1.24.18 1.71.11.52-.08 1.57-.64 1.8-1.25.22-.61.22-1.13.15-1.24-.07-.11-.24-.18-.5-.3z"/>
+                            </svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/mq.perfumes" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="Instagram">
+                            <!-- Official-style Instagram mark (stroke-based, currentColor) -->
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.2" stroke="currentColor" stroke-width="1.7"></rect>
+                                <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"></circle>
+                                <circle cx="17.35" cy="6.65" r="1.05" fill="currentColor"></circle>
+                            </svg>
+                        </a>
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/@mqperfumes" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.8 15.6V8.4L15.8 12l-6 3.6z"/>
+                            </svg>
+                        </a>
+                        <!-- Phone -->
+                        <a href="tel:+918097817540" class="header-social-icon" aria-label="Call us">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M6.6 2.2 4.3 4.5c-.8.8-1 2-.6 3 1.8 4.4 5.3 7.8 9.7 9.7 1 .4 2.2.2 3-.6l2.3-2.3a1.5 1.5 0 0 0 0-2.1l-2.3-2.3a1.5 1.5 0 0 0-2.1 0l-.9.9a.9.9 0 0 1-1 .2 9.4 9.4 0 0 1-3.7-3.7.9.9 0 0 1 .2-1l.9-.9a1.5 1.5 0 0 0 0-2.1L8.7 2.2a1.5 1.5 0 0 0-2.1 0z"/>
+                            </svg>
+                        </a>
+                        <!-- Email -->
+                        <a href="mailto:perfumesmq1@gmail.com" class="header-social-icon" aria-label="Email">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.2l8 5 8-5V6H4zm0 3.8V18h16V9.8l-7.5 4.7a1.5 1.5 0 0 1-1.6 0L4 9.8z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <button id="auth-btn" class="login-btn hidden md:block bg-yellow-500 text-black px-6 py-2 rounded-full hover:bg-yellow-400 transition-colors font-semibold">
+                        Login
+                    </button>
+
+                    <button id="cart-btn" class="relative cart-btn" aria-label="Cart">
+                        <span class="text-2xl">🛒</span>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-yellow-500 text-black rounded-full w-5 h-5 text-xs flex items-center justify-center font-bold">0</span>
+                    </button>
+
+                    <button id="mobile-menu-btn" class="md:hidden text-white" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden mt-3 pb-4 border-t border-yellow-500/20 pt-4">
+                <nav class="flex flex-col space-y-4">
+                    <a href="../index.html" class="nav-link home" aria-current="page">Home</a>
+                    <a href="shop.html" class="nav-link shop">Shop</a>
+                    <a href="about.html" class="nav-link about active">About</a>
+                    <a href="contact.html" class="nav-link contact">Contact</a>
+                    <a href="policies.html" class="nav-link policies">Policies</a>
+                    <div class="pt-2">
+                        <div class="header-social-icons justify-start" aria-label="Social links">
+                            <a href="https://wa.me/918097817540" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="WhatsApp chat">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M20.52 3.48A11.84 11.84 0 0 0 12.04 0C5.4 0 .16 5.24.16 11.88c0 2.1.56 4.14 1.62 5.95L0 24l6.33-1.78a11.9 11.9 0 0 0 5.7 1.47h.01c6.64 0 11.88-5.24 11.88-11.88 0-3.18-1.24-6.17-3.5-8.33zM12.04 21.3c-1.85 0-3.66-.5-5.24-1.45l-.38-.23-3.76 1 1.02-3.66-.24-.38a9.4 9.4 0 0 1-1.5-5.1c0-5.19 4.22-9.4 9.4-9.4 2.52 0 4.88.98 6.66 2.76a9.35 9.35 0 0 1 2.76 6.64c0 5.18-4.22 9.4-9.4 9.4zm4.85-7.48c-.26-.13-1.57-.77-1.81-.85-.24-.09-.42-.13-.6.13-.18.26-.69.85-.85 1.02-.16.18-.31.19-.57.06-.26-.13-1.09-.4-2.08-1.27-.77-.68-1.3-1.51-1.45-1.77-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.47.13-.16.17-.28.26-.47.08-.18.04-.34-.02-.47-.06-.13-.6-1.45-.83-1.99-.22-.53-.44-.46-.6-.47l-.51-.01c-.18 0-.47.07-.72.32-.25.25-.95.93-.95 2.27s.98 2.63 1.12 2.81c.14.18 1.93 2.95 4.68 4.14.65.28 1.15.45 1.54.58.65.21 1.24.18 1.71.11.52-.08 1.57-.64 1.8-1.25.22-.61.22-1.13.15-1.24-.07-.11-.24-.18-.5-.3z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/mq.perfumes" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.2" stroke="currentColor" stroke-width="1.7"></rect>
+                                    <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"></circle>
+                                    <circle cx="17.35" cy="6.65" r="1.05" fill="currentColor"></circle>
+                                </svg>
+                            </a>
+                            <a href="https://www.youtube.com/@mqperfumes" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="YouTube">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.8 15.6V8.4L15.8 12l-6 3.6z"/>
+                                </svg>
+                            </a>
+                            <a href="tel:+918097817540" class="header-social-icon" aria-label="Call us">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M6.6 2.2 4.3 4.5c-.8.8-1 2-.6 3 1.8 4.4 5.3 7.8 9.7 9.7 1 .4 2.2.2 3-.6l2.3-2.3a1.5 1.5 0 0 0 0-2.1l-2.3-2.3a1.5 1.5 0 0 0-2.1 0l-.9.9a.9.9 0 0 1-1 .2 9.4 9.4 0 0 1-3.7-3.7.9.9 0 0 1 .2-1l.9-.9a1.5 1.5 0 0 0 0-2.1L8.7 2.2a1.5 1.5 0 0 0-2.1 0z"/>
+                                </svg>
+                            </a>
+                            <a href="mailto:perfumesmq1@gmail.com" class="header-social-icon" aria-label="Email">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.2l8 5 8-5V6H4zm0 3.8V18h16V9.8l-7.5 4.7a1.5 1.5 0 0 1-1.6 0L4 9.8z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <button id="mobile-auth-btn" class="bg-yellow-500 text-black px-6 py-2 rounded-full hover:bg-yellow-400 transition-colors font-semibold w-fit">
+                        Login
+                    </button>
+                </nav>
+            </div>
+        </div>
+
+        <script>
+            (function () {
+                var btn = document.getElementById('mobile-menu-btn');
+                var menu = document.getElementById('mobile-menu');
+                if (!btn || !menu) return;
+                btn.addEventListener('click', function () {
+                    var nowHidden = menu.classList.toggle('hidden');
+                    btn.setAttribute('aria-expanded', String(!nowHidden));
+                });
+            })();
+        </script>
+    </header>
+    <script>
+        console.log('HEADERS_PERFECT: White nav + Golden active everywhere');
+    </script>
+
+    <section class="about-hero pt-24 pb-16 px-4 relative overflow-hidden">
+        <div class="about-hero-overlay"></div>
+        <div class="container mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl md:text-7xl font-['Crimson_Text'] font-bold accent-text mb-6">Our Story</h1>
+                <p class="text-xl md:text-2xl theme-text-secondary max-w-3xl mx-auto">
+                    Born from the mystical allure of lunar nights and desert oases, Al Qamar Perfumes captures the
+                    essence of Arabian luxury.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="py-16 px-4 theme-section about-section-animate">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-['Crimson_Text'] font-bold accent-text mb-6">The Birth of Lunar Luxury</h2>
+                    <div class="space-y-6 theme-text-secondary text-lg">
+                        <p>
+                            In the heart of the Arabian desert, under a canopy of stars that seemed to touch the earth,
+                            our journey began. The moon, that ancient celestial body that has inspired poets, lovers,
+                            and dreamers for millennia, became our muse.
+                        </p>
+                        <p>
+                            Al Qamar - "The Moon" in Arabic - represents the perfect fusion of tradition and modernity.
+                            Our master perfumers, drawing from centuries of Arabian fragrance heritage, craft scents
+                            that evoke the mystery of lunar eclipses, the serenity of full moons, and the magic of
+                            desert oases.
+                        </p>
+                        <p>
+                            Each fragrance is a journey through time and space, blending rare oud woods, precious
+                            spices, and exotic florals into olfactory masterpieces that tell stories of ancient
+                            caravans, moonlit palaces, and hidden desert gardens.
+                        </p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="../perfume images/dubai.jpg"
+                        alt="Desert oasis at night" class="w-full h-96 object-cover rounded-lg shadow-2xl">
+                    <div class="absolute inset-0 rounded-lg theme-card-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Lunar Philosophy Section -->
+    <section class="py-16 px-4 theme-section-alt about-section-animate">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-['Crimson_Text'] font-bold text-center accent-text mb-6">Our Lunar Philosophy</h2>
+            <p class="text-xl theme-text-secondary text-center max-w-3xl mx-auto mb-6">
+                We believe fragrance is an art form that connects the celestial with the earthly—where moonlit inspiration meets timeless Arabian tradition.
+            </p>
+            <ul class="max-w-3xl mx-auto mb-8 list-disc list-inside space-y-2 theme-text-secondary text-base md:text-lg">
+                <li>Every composition begins under a quiet sky, guided by the symbolism and stillness of the moon.</li>
+                <li>We balance rare oud, rose, and musk so each fragrance unfolds in phases—like a lunar cycle on your skin.</li>
+                <li>Sustainable, traceable sourcing ensures the lands that gift us ingredients are honored and protected.</li>
+                <li>Small-batch blending and slow maceration preserve nuance, so your signature scent feels truly personal.</li>
+            </ul>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="philosophy-card theme-card rounded-xl p-6 border border-transparent transition-all duration-300 hover:border-[var(--header-accent)] hover:shadow-[var(--shadow-gold)]">
+                    <div class="text-5xl mb-4">🌙</div>
+                    <h3 class="text-xl font-['Crimson_Text'] font-bold header-accent-text mb-3">Ancient Distillation</h3>
+                    <p class="theme-text-secondary text-sm leading-relaxed">Harnessing ancient Arabian distillation techniques passed down through generations of master perfumers.</p>
+                </div>
+                <div class="philosophy-card theme-card rounded-xl p-6 border border-transparent transition-all duration-300 hover:border-[var(--header-accent)] hover:shadow-[var(--shadow-gold)]">
+                    <div class="text-5xl mb-4">✨</div>
+                    <h3 class="text-xl font-['Crimson_Text'] font-bold header-accent-text mb-3">Moon-Phase Blending</h3>
+                    <p class="theme-text-secondary text-sm leading-relaxed">Moon-phase inspired fragrance blending for scents that evolve with celestial rhythms.</p>
+                </div>
+                <div class="philosophy-card theme-card rounded-xl p-6 border border-transparent transition-all duration-300 hover:border-[var(--header-accent)] hover:shadow-[var(--shadow-gold)]">
+                    <div class="text-5xl mb-4">🏜️</div>
+                    <h3 class="text-xl font-['Crimson_Text'] font-bold header-accent-text mb-3">Sustainable Sourcing</h3>
+                    <p class="theme-text-secondary text-sm leading-relaxed">Sustainable sourcing from Arabian deserts and oases, honoring the land that gives us our ingredients.</p>
+                </div>
+                <div class="philosophy-card theme-card rounded-xl p-6 border border-transparent transition-all duration-300 hover:border-[var(--header-accent)] hover:shadow-[var(--shadow-gold)]">
+                    <div class="text-5xl mb-4">👑</div>
+                    <h3 class="text-xl font-['Crimson_Text'] font-bold header-accent-text mb-3">Luxury Without Compromise</h3>
+                    <p class="theme-text-secondary text-sm leading-relaxed">Each bottle embodies Arabian luxury—precious oils, artisanal craftsmanship, and timeless elegance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rare Ingredients, Timeless Scents Section -->
+    <section class="py-16 px-4 theme-section about-section-animate">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-['Crimson_Text'] font-bold accent-text mb-6">Rare Ingredients, Timeless Scents</h2>
+                <p class="text-xl theme-text-secondary max-w-2xl mx-auto">
+                    We source the world's most precious aromatic ingredients to create fragrances that transcend time.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="ingredient-card theme-card rounded-xl p-8 text-center transition-all duration-300 hover:scale-[1.02] hover:shadow-[var(--shadow-gold)]">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center ingredient-icon-bg">
+                        <span class="text-4xl">🌿</span>
+                    </div>
+                    <h3 class="text-2xl font-['Crimson_Text'] font-bold header-accent-text mb-4">Oud Wood</h3>
+                    <p class="theme-text-secondary text-sm leading-relaxed">
+                        Agarwood, the "Wood of the Gods," is harvested from ancient Aquilaria trees in Southeast Asia and the Arabian Peninsula. Its rare, resinous heartwood yields a rich, woody, and profoundly intoxicating oil that has been treasured for millennia. We use only sustainably sourced oud to craft base notes of unparalleled depth and longevity.
+                    </p>
+                </div>
+                <div class="ingredient-card theme-card rounded-xl p-8 text-center transition-all duration-300 hover:scale-[1.02] hover:shadow-[var(--shadow-gold)]">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center ingredient-icon-bg">
+                        <span class="text-4xl">🌹</span>
+                    </div>
+                    <h3 class="text-2xl font-['Crimson_Text'] font-bold header-accent-text mb-4">Arabian Rose</h3>
+                    <p class="theme-text-secondary text-sm leading-relaxed">
+                        Taif rose and Damask rose from the highlands of Arabia and the valleys of Bulgaria bring a velvety, romantic heart to our fragrances. Hand-harvested at dawn when petals hold peak fragrance, our Arabian rose absolute delivers an opulent, sensual floral note that evokes moonlit desert gardens and royal courts.
+                    </p>
+                </div>
+                <div class="ingredient-card theme-card rounded-xl p-8 text-center transition-all duration-300 hover:scale-[1.02] hover:shadow-[var(--shadow-gold)]">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center ingredient-icon-bg">
+                        <span class="text-4xl">🕯️</span>
+                    </div>
+                    <h3 class="text-2xl font-['Crimson_Text'] font-bold header-accent-text mb-4">Musk</h3>
+                    <p class="theme-text-secondary text-sm leading-relaxed">
+                        Prized for its warm, skin-softening character, our musk is carefully blended from ethically sourced natural and botanical musk alternatives. This foundational note adds sensuality and longevity, creating a whisper-close dry-down that lingers like the memory of a moonlit evening. A signature of Arabian perfumery for centuries.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process / Craftsmanship Section -->
+    <section class="py-16 px-4 theme-section-alt about-section-animate">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-['Crimson_Text'] font-bold text-center accent-text mb-6">Our Process</h2>
+            <p class="text-xl theme-text-secondary text-center max-w-2xl mx-auto mb-16">
+                From rare harvests to your doorstep—every step honors the art of Arabian perfumery.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="process-step theme-card rounded-xl p-6 relative transition-all duration-300 hover:shadow-[var(--shadow-gold)]">
+                    <span class="absolute -top-3 -left-3 w-10 h-10 rounded-full flex items-center justify-center font-bold process-step-num">1</span>
+                    <div class="text-4xl mb-4">🌍</div>
+                    <h3 class="text-xl font-['Crimson_Text'] font-bold header-accent-text mb-3">Sourcing</h3>
+                    <p class="theme-text-secondary text-sm leading-relaxed">We partner with trusted growers and distillers across the Arabian Peninsula, Southeast Asia, and the Mediterranean to source only the finest raw materials—oud chips, rose petals, saffron threads, and rare absolutes—with full traceability and sustainable practices.</p>
+                </div>
+                <div class="process-step theme-card rounded-xl p-6 relative transition-all duration-300 hover:shadow-[var(--shadow-gold)]">
+                    <span class="absolute -top-3 -left-3 w-10 h-10 rounded-full flex items-center justify-center font-bold process-step-num">2</span>
+                    <div class="text-4xl mb-4">⚗️</div>
+                    <h3 class="text-xl font-['Crimson_Text'] font-bold header-accent-text mb-3">Distillation</h3>
+                    <p class="theme-text-secondary text-sm leading-relaxed">Master perfumers use traditional copper stills and modern cold-extraction methods to capture the soul of each ingredient. Distillation happens in small batches to preserve volatile top notes and ensure consistency. Patience is our creed—some oils age for years before blending.</p>
+                </div>
+                <div class="process-step theme-card rounded-xl p-6 relative transition-all duration-300 hover:shadow-[var(--shadow-gold)]">
+                    <span class="absolute -top-3 -left-3 w-10 h-10 rounded-full flex items-center justify-center font-bold process-step-num">3</span>
+                    <div class="text-4xl mb-4">🌀</div>
+                    <h3 class="text-xl font-['Crimson_Text'] font-bold header-accent-text mb-3">Blending</h3>
+                    <p class="theme-text-secondary text-sm leading-relaxed">Our nose crafts each composition by hand, layering top, heart, and base notes until the perfect balance is achieved. Moon-phase inspiration guides seasonal releases; every blend is tested for longevity, sillage, and emotional resonance before approval.</p>
+                </div>
+                <div class="process-step theme-card rounded-xl p-6 relative transition-all duration-300 hover:shadow-[var(--shadow-gold)]">
+                    <span class="absolute -top-3 -left-3 w-10 h-10 rounded-full flex items-center justify-center font-bold process-step-num">4</span>
+                    <div class="text-4xl mb-4">🧴</div>
+                    <h3 class="text-xl font-['Crimson_Text'] font-bold header-accent-text mb-3">Bottling</h3>
+                    <p class="theme-text-secondary text-sm leading-relaxed">Each bottle is filled by hand in our atelier, then sealed and packaged with care. Luxurious presentation—gold accents, lunar-inspired packaging—ensures your fragrance arrives as a gift to yourself. We never compromise on quality from harvest to delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Share Your Lunar Experience - Review Form -->
+    <section class="py-16 px-4 theme-section about-review-section about-section-animate">
+        <div class="container mx-auto flex justify-center">
+            <div class="w-full md:w-[70%] review-form-card contact-card rounded-xl p-8 md:p-10 shadow-lg">
+                <h2 class="text-3xl font-['Crimson_Text'] font-bold accent-text text-center mb-2">Share Your Lunar Experience</h2>
+                <p class="theme-text-secondary text-center mb-8">Help us perfect your fragrance journey</p>
+                <div id="review-thank-you" class="hidden text-center py-8">
+                    <div class="text-5xl mb-4">✨</div>
+                    <h3 class="text-2xl font-['Crimson_Text'] font-bold accent-text mb-2">Thank You</h3>
+                    <p class="theme-text-secondary">Your feedback lights our path. We appreciate you sharing your lunar experience.</p>
+                </div>
+                <form id="review-form" class="space-y-6" action="../review-handler.php" method="POST">
+                    <div>
+                        <label class="block contact-label mb-2">5-Star Perfume Rating <span class="text-red-500">*</span></label>
+                        <div class="flex items-center gap-1 review-rating" role="radiogroup" aria-label="Star rating">
+                            <button type="button" class="review-star-btn" data-value="1" aria-label="1 star" aria-checked="false">
+                                <span class="review-star text-[#c0c0c0]">★</span>
+                            </button>
+                            <button type="button" class="review-star-btn" data-value="2" aria-label="2 stars" aria-checked="false">
+                                <span class="review-star text-[#c0c0c0]">★</span>
+                            </button>
+                            <button type="button" class="review-star-btn" data-value="3" aria-label="3 stars" aria-checked="false">
+                                <span class="review-star text-[#c0c0c0]">★</span>
+                            </button>
+                            <button type="button" class="review-star-btn" data-value="4" aria-label="4 stars" aria-checked="false">
+                                <span class="review-star text-[#c0c0c0]">★</span>
+                            </button>
+                            <button type="button" class="review-star-btn" data-value="5" aria-label="5 stars" aria-checked="false">
+                                <span class="review-star text-[#c0c0c0]">★</span>
+                            </button>
+                        </div>
+                        <input type="hidden" name="rating" id="review-rating" value="">
+                        <p id="review-error-rating" class="mt-2 text-sm text-red-500 hidden" role="alert"></p>
+                    </div>
+                    <div>
+                        <label class="block contact-label mb-2">Customer experience while purchasing</label>
+                        <textarea id="review-experience" name="experience" rows="3" class="contact-textarea w-full px-4 py-3 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-[var(--header-accent)]" placeholder="How was your experience while purchasing from us?"></textarea>
+                        <p id="review-error-experience" class="mt-2 text-sm text-red-500 hidden" role="alert"></p>
+                    </div>
+                    <div>
+                        <label class="block contact-label mb-2">Any query?</label>
+                        <textarea id="review-query" name="query" rows="3" class="contact-textarea w-full px-4 py-3 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-[var(--header-accent)]" placeholder="Questions or concerns? We're here to help."></textarea>
+                    </div>
+                    <div>
+                        <label class="block contact-label mb-2">Suggestions for business (delivery, payment, packing)</label>
+                        <textarea id="review-suggestions" name="suggestions" rows="3" class="contact-textarea w-full px-4 py-3 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-[var(--header-accent)]" placeholder="Share your ideas to help us improve."></textarea>
+                    </div>
+                    <div>
+                        <label class="block contact-label mb-2">How likely are you to purchase again? <span class="text-red-500">*</span></label>
+                        <div class="flex flex-wrap gap-2 items-center">
+                            <select id="review-repurchase" name="repurchase_likelihood" required class="contact-input px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--header-accent)] min-w-[180px]">
+                                <option value="">Select</option>
+                                <option value="very_unlikely">Very unlikely</option>
+                                <option value="unlikely">Unlikely</option>
+                                <option value="neutral">Neutral</option>
+                                <option value="likely">Likely</option>
+                                <option value="very_likely">Very likely</option>
+                            </select>
+                        </div>
+                        <p id="review-error-likelihood" class="mt-2 text-sm text-red-500 hidden" role="alert"></p>
+                    </div>
+                    <div id="review-submit-status-error" class="hidden text-sm text-red-500 text-center" role="alert">
+                        Unable to submit your review. Please fix the highlighted fields and try again.
+                    </div>
+                    <button type="submit" class="w-full cta-button py-3 rounded-lg font-semibold transition-colors review-submit-btn">
+                        Submit Review
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4 theme-cta-section">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-['Crimson_Text'] font-bold accent-text mb-6">Begin Your Lunar Journey</h2>
+            <p class="text-xl theme-text-secondary mb-8 max-w-2xl mx-auto">
+                Discover fragrances that capture the magic of the moon and the mystery of the desert. Each scent tells a
+                story of luxury and elegance.
+            </p>
+            <a href="shop.html"
+                class="inline-block cta-button px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Explore Our Collection
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer (identical across Home, Shop, About, Contact) -->
+    <footer class="theme-footer site-footer py-12">
+        <div class="footer-inner container mx-auto px-4">
+                <div class="footer-column footer-brand">
+                    <div class="brand-column">
+                      <img src="../perfume images/logo image.jpg" 
+                           alt="Al Qamar Perfumes" 
+                           class="footer-logo"
+                           loading="lazy" decoding="async"
+                           style="
+                             width: 65px; height: 65px; object-fit: cover;
+                             border-radius: 50%; border: 3px solid var(--accent-color);
+                             transition: all 0.3s ease;
+                           "
+                           onerror="this.style.background='linear-gradient(135deg,var(--accent-color),#00B8B0);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;color:white;font-weight:bold'">
+                      <div>
+                        <h3 style="color: var(--accent-color);">Mohammad Al Qamar Perfumes</h3>
+                        <p>Lunar Arabian Luxury</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="footer-column footer-links">
+                    <h5 class="font-semibold theme-text mb-4">Quick Links</h5>
+                    <ul class="space-y-2 theme-text-secondary">
+                        <li><a href="#home" class="footer-link">Home</a></li>
+                        <li><a href="shop.html" class="footer-link">Shop</a></li>
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="policies.html" class="footer-link">Policies</a></li>
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-service">
+                    <h5 class="font-semibold theme-text mb-4">Customer Service</h5>
+                    <ul class="space-y-2 theme-text-secondary">
+                        <li><a href="track-order.html" class="footer-link">Track Order</a></li>
+                        <li><a href="#" class="footer-link">Returns</a></li>
+                        <li><a href="#" class="footer-link">Shipping</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-connect">
+                    <h4 style="margin-bottom: 16px; color: var(--text-primary);">Connect</h4>
+                    <div class="social-icons header-social-icons" aria-label="Social links">
+                        <a href="https://www.instagram.com/mq.perfumes" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.2" stroke="currentColor" stroke-width="1.7"></rect>
+                                <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"></circle>
+                                <circle cx="17.35" cy="6.65" r="1.05" fill="currentColor"></circle>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/918097817540" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@mqperfumes" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+                            </svg>
+                        </a>
+                        <a href="mailto:perfumesmq1@gmail.com" class="header-social-icon" aria-label="Email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                        <a href="tel:+918097817540" class="header-social-icon" aria-label="Phone">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            <div class="footer-bottom border-t theme-border mt-8 pt-8 text-center theme-text-secondary">
+                <p>&copy; 2024 Al Qamar Perfumes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('All headers standardized to home.html - theme sync confirmed');
+            console.log('Footers 100% standardized + optimized.');
+            console.log('About page heading/description glitch FIXED - visible on initial load');
+            // Force about hero heading + description visible immediately (no GSAP hide)
+            var heroHeading = document.querySelector('.about-hero h1');
+            var heroDesc = document.querySelector('.about-hero .text-center p, .about-hero .theme-text-secondary');
+            if (heroHeading) {
+                heroHeading.style.cssText = 'display: block !important; opacity: 1 !important; visibility: visible !important;';
+            }
+            if (heroDesc) {
+                heroDesc.style.cssText = 'display: block !important; opacity: 1 !important; visibility: visible !important;';
+            }
+            document.querySelectorAll('.about-hero .text-center h1, .about-hero .text-center p').forEach(function (el) {
+                el.style.cssText = 'display: block !important; opacity: 1 !important; visibility: visible !important;';
+            });
+            if (typeof authManager !== 'undefined') authManager.checkExistingSession();
+            if (typeof cartManager !== 'undefined') {
+                cartManager.loadCart();
+                cartManager.updateCartCount();
+            }
+            // Philosophy cards: subtle animation only - do NOT hide hero
+            if (typeof gsap !== 'undefined') {
+                gsap.from('.philosophy-card', { opacity: 0, y: 20, duration: 0.6, stagger: 0.1, delay: 0.3 });
+            }
+            // Scroll-triggered fade-in for sections (NOT hero - hero stays visible)
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('about-section-visible');
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            document.querySelectorAll('.about-section-animate').forEach(function (el) {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+            // Review form: server redirect status + frontend validation + star rating logic
+            var urlParams = new URLSearchParams(window.location.search);
+            var reviewStatus = urlParams.get('status');
+            var reviewForm = document.getElementById('review-form');
+            var thankYou = document.getElementById('review-thank-you');
+            var statusErrorEl = document.getElementById('review-submit-status-error');
+
+            if (reviewStatus === 'success' && thankYou && reviewForm) {
+                reviewForm.classList.add('hidden');
+                thankYou.classList.remove('hidden');
+                thankYou.style.animation = 'fadeInUp 0.5s ease forwards';
+            } else if (reviewStatus === 'error' && statusErrorEl) {
+                statusErrorEl.classList.remove('hidden');
+            }
+
+            if (reviewForm) {
+                var ratingInput = document.getElementById('review-rating');
+                var starBtns = reviewForm.querySelectorAll('.review-star-btn');
+
+                var experienceEl = document.getElementById('review-experience');
+                var queryEl = document.getElementById('review-query');
+                var suggestionsEl = document.getElementById('review-suggestions');
+                var likelihoodEl = document.getElementById('review-repurchase');
+
+                var errorRatingEl = document.getElementById('review-error-rating');
+                var errorExperienceEl = document.getElementById('review-error-experience');
+                var errorLikelihoodEl = document.getElementById('review-error-likelihood');
+
+                function setHidden(el, hidden) {
+                    if (!el) return;
+                    if (hidden) el.classList.add('hidden');
+                    else el.classList.remove('hidden');
+                }
+
+                function clearErrors() {
+                    [errorRatingEl, errorExperienceEl, errorLikelihoodEl].forEach(function (el) {
+                        if (!el) return;
+                        el.textContent = '';
+                        setHidden(el, true);
+                    });
+                }
+
+                function showError(el, message) {
+                    if (!el) return;
+                    el.textContent = message;
+                    setHidden(el, false);
+                }
+
+                function updateStars(selectedValue) {
+                    var value = selectedValue ? Number(selectedValue) : 0;
+                    starBtns.forEach(function (btn) {
+                        var v = Number(btn.dataset.value);
+                        var span = btn.querySelector('.review-star');
+                        var isActive = value && v <= value;
+                        if (span) {
+                            if (isActive) {
+                                span.classList.add('text-yellow-500');
+                                span.classList.remove('text-[#c0c0c0]');
+                            } else {
+                                span.classList.remove('text-yellow-500');
+                                span.classList.add('text-[#c0c0c0]');
+                            }
+                        }
+                        btn.setAttribute('aria-checked', isActive ? 'true' : 'false');
+                    });
+                }
+
+                // Initialize star state.
+                updateStars(0);
+
+                starBtns.forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                        var value = Number(btn.dataset.value);
+                        if (ratingInput) ratingInput.value = String(value);
+                        updateStars(value);
+                    });
+                });
+
+                reviewForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    if (statusErrorEl) statusErrorEl.classList.add('hidden');
+                    clearErrors();
+
+                    var ratingRaw = ratingInput ? (ratingInput.value || '').trim() : '';
+                    var rating = ratingRaw ? parseInt(ratingRaw, 10) : NaN;
+                    var experience = experienceEl ? (experienceEl.value || '').trim() : '';
+                    var query = queryEl ? (queryEl.value || '').trim() : '';
+                    var suggestions = suggestionsEl ? (suggestionsEl.value || '').trim() : '';
+                    var likelihood = likelihoodEl ? (likelihoodEl.value || '').trim() : '';
+
+                    var ok = true;
+
+                    // rating: required, integer 1-5
+                    if (!Number.isInteger(rating) || rating < 1 || rating > 5) {
+                        showError(errorRatingEl, 'Please select a star rating from 1 to 5.');
+                        ok = false;
+                    }
+
+                    // experience: required, min length 15
+                    if (!experience || experience.length < 15) {
+                        showError(errorExperienceEl, 'Please share your experience (at least 15 characters).');
+                        ok = false;
+                    }
+
+                    // repurchase_likelihood: required, must not be default
+                    if (!likelihood) {
+                        showError(errorLikelihoodEl, 'Please choose how likely you are to purchase again.');
+                        ok = false;
+                    }
+
+                    if (!ok) return;
+
+                    // Trim optional fields before sending.
+                    if (queryEl) queryEl.value = query;
+                    if (suggestionsEl) suggestionsEl.value = suggestions;
+                    if (ratingInput) ratingInput.value = String(rating);
+
+                    // Ready log + exact payload for TEST MODE.
+                    var payload = {
+                        type: 'review',
+                        fields: {
+                            rating: rating,
+                            experience: experience,
+                            query: query,
+                            suggestions: suggestions,
+                            repurchase_likelihood: likelihood
+                        }
+                    };
+                    console.log('REVIEW FORM READY TO SEND', payload);
+
+                    if (window.FORM_TEST_MODE) {
+                        console.log('TEST MODE: would submit review payload to PHP handler:', payload);
+                        return;
+                    }
+
+                    reviewForm.submit();
+                });
+            }
+            var mobileBtn = document.getElementById('mobile-menu-btn');
+            var mobileMenu = document.getElementById('mobile-menu');
+            if (mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', function () { mobileMenu.classList.toggle('hidden'); });
+            }
+            console.log('FOOTER_CLEAN_ALL_PAGES: Perfect spacing everywhere');
+        });
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                document.querySelectorAll('.about-hero h1, .about-hero .text-center p').forEach(function (el) {
+                    if (el) el.style.setProperty('display', 'block', 'important');
+                    if (el) el.style.setProperty('opacity', '1', 'important');
+                    if (el) el.style.setProperty('visibility', 'visible', 'important');
+                });
+            }, 100);
+        });
+    </script>
+</body>
+
+</html>

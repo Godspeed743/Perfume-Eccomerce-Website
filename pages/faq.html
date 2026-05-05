@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Al Qamar Perfumes</title>
+    <meta name="description" content="Frequently asked questions about Al Qamar Perfumes. Learn about our fragrances, shipping, returns, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind theme configuration with CSS variables for dark theme
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'theme-bg': 'var(--bg-primary)',
+                        'theme-bg-secondary': 'var(--bg-secondary)',
+                        'theme-bg-tertiary': 'var(--bg-tertiary)',
+                        'theme-bg-card': 'var(--bg-card)',
+                        'theme-bg-hover': 'var(--bg-hover)',
+                        'theme-text': 'var(--text-primary)',
+                        'theme-text-secondary': 'var(--text-secondary)',
+                        'theme-text-muted': 'var(--text-muted)',
+                        'theme-gold': 'var(--accent-gold)',
+                        'theme-gold-dark': 'var(--accent-gold-dark)',
+                        'theme-gold-light': 'var(--accent-gold-light)',
+                        'theme-turquoise': 'var(--accent-turquoise)',
+                        'theme-border': 'var(--border-color)',
+                        'theme-border-light': 'var(--border-light)',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../js/theme.js"></script>
+    <style>
+    :root {
+      --accent-color: #D4AF37;
+      --accent-hover: #f6c343;
+      --header-bg: rgba(10,10,26,0.98);
+      --footer-bg: #0a0a1a;
+      --text-primary: #ffffff;
+      --text-secondary: #b8b8cc;
+    }
+    [data-theme="dark"] {
+      --accent-color: #D4AF37;
+      --accent-hover: #f6c343;
+    }
+    </style>
+</head>
+<body class="bg-[#0f0f23] text-white font-['Poppins']">
+    <!-- Top Marquee -->
+    <div class="marquee-container">
+        <div class="marquee-text">🚚 FREE DELIVERY ON ALL ORDERS 🚚 FREE DELIVERY ON ALL ORDERS 🚚 FREE DELIVERY ON ALL ORDERS 🚚 FREE DELIVERY ON ALL ORDERS 🚚 FREE DELIVERY ON ALL ORDERS</div>
+    </div>
+
+    <!-- Mobile Header (320px-768px) -->
+    <header class="mobile-header site-header" aria-label="Mobile header">
+        <div class="mobile-header-left">
+            <img src="../perfume images/logo image.jpg" alt="Mohammad Al Qamar Perfumes logo" class="mobile-logo" loading="eager" decoding="async">
+            <span class="mobile-brand">Mohammad Al Qamar Perfumes</span>
+        </div>
+
+        <div class="mobile-header-right">
+            <button id="cart-btn" class="mobile-cart-btn" aria-label="View cart" type="button">
+                <span class="text-2xl" aria-hidden="true">🛒</span>
+                <span id="cart-count" class="cart-badge">0</span>
+            </button>
+            <button class="mobile-menu-toggle hamburger" aria-label="Open menu" aria-controls="mobile-menu-overlay" aria-expanded="false" type="button">
+                <span class="hamburger-lines" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                </span>
+            </button>
+        </div>
+    </header>
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <nav class="mobile-menu" aria-label="Mobile navigation">
+            <a href="../index.html" data-nav="home">Home</a>
+            <a href="shop.html" data-nav="shop">Shop</a>
+            <a href="about.html" data-nav="about">About Us</a>
+            <a href="contact.html" data-nav="contact">Contact</a>
+            <a href="policies.html" data-nav="policies">Policies</a>
+            <div class="mobile-social-row" aria-label="Social links">
+                <div class="header-social-icons">
+                    <a href="https://wa.me/918097817540" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="WhatsApp chat">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M20.52 3.48A11.84 11.84 0 0 0 12.04 0C5.4 0 .16 5.24.16 11.88c0 2.1.56 4.14 1.62 5.95L0 24l6.33-1.78a11.9 11.9 0 0 0 5.7 1.47h.01c6.64 0 11.88-5.24 11.88-11.88 0-3.18-1.24-6.17-3.5-8.33zM12.04 21.3c-1.85 0-3.66-.5-5.24-1.45l-.38-.23-3.76 1 1.02-3.66-.24-.38a9.4 9.4 0 0 1-1.5-5.1c0-5.19 4.22-9.4 9.4-9.4 2.52 0 4.88.98 6.66 2.76a9.35 9.35 0 0 1 2.76 6.64c0 5.18-4.22 9.4-9.4 9.4zm4.85-7.48c-.26-.13-1.57-.77-1.81-.85-.24-.09-.42-.13-.6.13-.18.26-.69.85-.85 1.02-.16.18-.31.19-.57.06-.26-.13-1.09-.4-2.08-1.27-.77-.68-1.3-1.51-1.45-1.77-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.47.13-.16.17-.28.26-.47.08-.18.04-.34-.02-.47-.06-.13-.6-1.45-.83-1.99-.22-.53-.44-.46-.6-.47l-.51-.01c-.18 0-.47.07-.72.32-.25.25-.95.93-.95 2.27s.98 2.63 1.12 2.81c.14.18 1.93 2.95 4.68 4.14.65.28 1.15.45 1.54.58.65.21 1.24.18 1.71.11.52-.08 1.57-.64 1.8-1.25.22-.61.22-1.13.15-1.24-.07-.11-.24-.18-.5-.3z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/mq.perfumes" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.2" stroke="currentColor" stroke-width="1.7"></rect>
+                            <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"></circle>
+                            <circle cx="17.35" cy="6.65" r="1.05" fill="currentColor"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@mqperfumes" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.8 15.6V8.4L15.8 12l-6 3.6z"/>
+                        </svg>
+                    </a>
+                    <a href="tel:+918097817540" class="header-social-icon" aria-label="Call us">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M6.6 2.2 4.3 4.5c-.8.8-1 2-.6 3 1.8 4.4 5.3 7.8 9.7 9.7 1 .4 2.2.2 3-.6l2.3-2.3a1.5 1.5 0 0 0 0-2.1l-2.3-2.3a1.5 1.5 0 0 0-2.1 0l-.9.9a.9.9 0 0 1-1 .2 9.4 9.4 0 0 1-3.7-3.7.9.9 0 0 1 .2-1l.9-.9a1.5 1.5 0 0 0 0-2.1L8.7 2.2a1.5 1.5 0 0 0-2.1 0z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header" id="mainHeader">
+        <style>
+            .site-header .nav-link {
+                color: var(--text-primary);
+                font-weight: 500;
+                transition: color 0.2s ease, opacity 0.2s ease;
+                opacity: 0.92;
+            }
+
+            .site-header .nav-link:hover {
+                color: var(--accent-color);
+                opacity: 1;
+            }
+
+            .site-header .nav-link.active {
+                color: var(--accent-color);
+                opacity: 1;
+                font-weight: 600;
+            }
+        </style>
+
+        <div class="mx-auto max-w-[1400px] px-[5%] py-3">
+            <div class="flex items-center gap-6">
+                <a class="site-logo flex items-center gap-3 shrink-0" href="../index.html" aria-label="Mohammad Al Qamar Perfumes home">
+                    <img src="../perfume images/logo image.jpg" alt="Mohammad Al Qamar Perfumes"
+                        class="header-logo w-12 h-12 object-contain rounded-full cursor-pointer"
+                        loading="eager" decoding="async"
+                        style="border: 2px solid var(--accent-color);">
+                    <span class="header-title text-lg font-bold tracking-wide">Mohammad Al Qamar Perfumes</span>
+                </a>
+
+                <nav class="hidden md:flex items-center gap-8 flex-1">
+                    <a href="../index.html" class="nav-link home" aria-current="page">Home</a>
+                    <a href="shop.html" class="nav-link shop">Shop</a>
+                    <a href="about.html" class="nav-link about">About</a>
+                    <a href="contact.html" class="nav-link contact">Contact</a>
+                    <a href="policies.html" class="nav-link policies">Policies</a>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="hidden md:flex header-social-icons" aria-label="Social links">
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/918097817540" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="WhatsApp chat">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M20.52 3.48A11.84 11.84 0 0 0 12.04 0C5.4 0 .16 5.24.16 11.88c0 2.1.56 4.14 1.62 5.95L0 24l6.33-1.78a11.9 11.9 0 0 0 5.7 1.47h.01c6.64 0 11.88-5.24 11.88-11.88 0-3.18-1.24-6.17-3.5-8.33zM12.04 21.3c-1.85 0-3.66-.5-5.24-1.45l-.38-.23-3.76 1 1.02-3.66-.24-.38a9.4 9.4 0 0 1-1.5-5.1c0-5.19 4.22-9.4 9.4-9.4 2.52 0 4.88.98 6.66 2.76a9.35 9.35 0 0 1 2.76 6.64c0 5.18-4.22 9.4-9.4 9.4zm4.85-7.48c-.26-.13-1.57-.77-1.81-.85-.24-.09-.42-.13-.6.13-.18.26-.69.85-.85 1.02-.16.18-.31.19-.57.06-.26-.13-1.09-.4-2.08-1.27-.77-.68-1.3-1.51-1.45-1.77-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.47.13-.16.17-.28.26-.47.08-.18.04-.34-.02-.47-.06-.13-.6-1.45-.83-1.99-.22-.53-.44-.46-.6-.47l-.51-.01c-.18 0-.47.07-.72.32-.25.25-.95.93-.95 2.27s.98 2.63 1.12 2.81c.14.18 1.93 2.95 4.68 4.14.65.28 1.15.45 1.54.58.65.21 1.24.18 1.71.11.52-.08 1.57-.64 1.8-1.25.22-.61.22-1.13.15-1.24-.07-.11-.24-.18-.5-.3z"/>
+                            </svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/mq.perfumes" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="Instagram">
+                            <!-- Official-style Instagram mark (stroke-based, currentColor) -->
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.2" stroke="currentColor" stroke-width="1.7"></rect>
+                                <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"></circle>
+                                <circle cx="17.35" cy="6.65" r="1.05" fill="currentColor"></circle>
+                            </svg>
+                        </a>
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/@mqperfumes" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.8 15.6V8.4L15.8 12l-6 3.6z"/>
+                            </svg>
+                        </a>
+                        <!-- Phone -->
+                        <a href="tel:+918097817540" class="header-social-icon" aria-label="Call us">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M6.6 2.2 4.3 4.5c-.8.8-1 2-.6 3 1.8 4.4 5.3 7.8 9.7 9.7 1 .4 2.2.2 3-.6l2.3-2.3a1.5 1.5 0 0 0 0-2.1l-2.3-2.3a1.5 1.5 0 0 0-2.1 0l-.9.9a.9.9 0 0 1-1 .2 9.4 9.4 0 0 1-3.7-3.7.9.9 0 0 1 .2-1l.9-.9a1.5 1.5 0 0 0 0-2.1L8.7 2.2a1.5 1.5 0 0 0-2.1 0z"/>
+                            </svg>
+                        </a>
+                        <!-- Email -->
+                        <a href="mailto:perfumesmq1@gmail.com" class="header-social-icon" aria-label="Email">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.2l8 5 8-5V6H4zm0 3.8V18h16V9.8l-7.5 4.7a1.5 1.5 0 0 1-1.6 0L4 9.8z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <button id="auth-btn" class="login-btn hidden md:block bg-yellow-500 text-black px-6 py-2 rounded-full hover:bg-yellow-400 transition-colors font-semibold">
+                        Login
+                    </button>
+
+                    <button id="cart-btn" class="relative cart-btn" aria-label="Cart">
+                        <span class="text-2xl">🛒</span>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-yellow-500 text-black rounded-full w-5 h-5 text-xs flex items-center justify-center font-bold">0</span>
+                    </button>
+
+                    <button id="mobile-menu-btn" class="md:hidden text-white" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden mt-3 pb-4 border-t border-yellow-500/20 pt-4">
+                <nav class="flex flex-col space-y-4">
+                    <a href="../index.html" class="nav-link home" aria-current="page">Home</a>
+                    <a href="shop.html" class="nav-link shop">Shop</a>
+                    <a href="about.html" class="nav-link about">About</a>
+                    <a href="contact.html" class="nav-link contact">Contact</a>
+                    <a href="policies.html" class="nav-link policies">Policies</a>
+                    <div class="pt-2">
+                        <div class="header-social-icons justify-start" aria-label="Social links">
+                            <a href="https://wa.me/918097817540" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="WhatsApp chat">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M20.52 3.48A11.84 11.84 0 0 0 12.04 0C5.4 0 .16 5.24.16 11.88c0 2.1.56 4.14 1.62 5.95L0 24l6.33-1.78a11.9 11.9 0 0 0 5.7 1.47h.01c6.64 0 11.88-5.24 11.88-11.88 0-3.18-1.24-6.17-3.5-8.33zM12.04 21.3c-1.85 0-3.66-.5-5.24-1.45l-.38-.23-3.76 1 1.02-3.66-.24-.38a9.4 9.4 0 0 1-1.5-5.1c0-5.19 4.22-9.4 9.4-9.4 2.52 0 4.88.98 6.66 2.76a9.35 9.35 0 0 1 2.76 6.64c0 5.18-4.22 9.4-9.4 9.4zm4.85-7.48c-.26-.13-1.57-.77-1.81-.85-.24-.09-.42-.13-.6.13-.18.26-.69.85-.85 1.02-.16.18-.31.19-.57.06-.26-.13-1.09-.4-2.08-1.27-.77-.68-1.3-1.51-1.45-1.77-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.47.13-.16.17-.28.26-.47.08-.18.04-.34-.02-.47-.06-.13-.6-1.45-.83-1.99-.22-.53-.44-.46-.6-.47l-.51-.01c-.18 0-.47.07-.72.32-.25.25-.95.93-.95 2.27s.98 2.63 1.12 2.81c.14.18 1.93 2.95 4.68 4.14.65.28 1.15.45 1.54.58.65.21 1.24.18 1.71.11.52-.08 1.57-.64 1.8-1.25.22-.61.22-1.13.15-1.24-.07-.11-.24-.18-.5-.3z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/mq.perfumes" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.2" stroke="currentColor" stroke-width="1.7"></rect>
+                                    <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"></circle>
+                                    <circle cx="17.35" cy="6.65" r="1.05" fill="currentColor"></circle>
+                                </svg>
+                            </a>
+                            <a href="https://www.youtube.com/@mqperfumes" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="YouTube">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.8 15.6V8.4L15.8 12l-6 3.6z"/>
+                                </svg>
+                            </a>
+                            <a href="tel:+918097817540" class="header-social-icon" aria-label="Call us">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M6.6 2.2 4.3 4.5c-.8.8-1 2-.6 3 1.8 4.4 5.3 7.8 9.7 9.7 1 .4 2.2.2 3-.6l2.3-2.3a1.5 1.5 0 0 0 0-2.1l-2.3-2.3a1.5 1.5 0 0 0-2.1 0l-.9.9a.9.9 0 0 1-1 .2 9.4 9.4 0 0 1-3.7-3.7.9.9 0 0 1 .2-1l.9-.9a1.5 1.5 0 0 0 0-2.1L8.7 2.2a1.5 1.5 0 0 0-2.1 0z"/>
+                                </svg>
+                            </a>
+                            <a href="mailto:perfumesmq1@gmail.com" class="header-social-icon" aria-label="Email">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.2l8 5 8-5V6H4zm0 3.8V18h16V9.8l-7.5 4.7a1.5 1.5 0 0 1-1.6 0L4 9.8z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <button id="mobile-auth-btn" class="bg-yellow-500 text-black px-6 py-2 rounded-full hover:bg-yellow-400 transition-colors font-semibold w-fit">
+                        Login
+                    </button>
+                </nav>
+            </div>
+        </div>
+
+        <script>
+            (function () {
+                var btn = document.getElementById('mobile-menu-btn');
+                var menu = document.getElementById('mobile-menu');
+                if (!btn || !menu) return;
+                btn.addEventListener('click', function () {
+                    var nowHidden = menu.classList.toggle('hidden');
+                    btn.setAttribute('aria-expanded', String(!nowHidden));
+                });
+            })();
+        </script>
+    </header>
+    <script>
+        console.log('HEADERS_PERFECT: White nav + Golden active everywhere');
+    </script>
+
+    <section class="pt-36 pb-16 px-4 relative overflow-hidden z-0">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#0f0f23] to-[#1a1a2e] opacity-90"></div>
+        <div class="container mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl md:text-7xl font-['Crimson_Text'] font-bold text-yellow-500 mb-6">Frequently Asked Questions</h1>
+                <p class="text-xl md:text-2xl text-[#c0c0c0] max-w-3xl mx-auto">
+                    Find answers to common questions about our lunar fragrances and services.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <!-- Search FAQ -->
+            <div class="mb-12">
+                <div class="relative max-w-md mx-auto">
+                    <input type="text" id="faq-search" placeholder="Search FAQs..." class="w-full px-4 py-3 pl-12 bg-[#0f0f23] border border-[#ffd700]/20 rounded-full focus:border-[#40e0d0] focus:outline-none">
+                    <span class="absolute left-4 top-3.5 text-[#c0c0c0]">🔍</span>
+                </div>
+            </div>
+
+            <!-- FAQ Categories -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button onclick="filterFAQ('all')" class="faq-category bg-yellow-500 text-black px-6 py-2 rounded-full font-semibold">All</button>
+                <button onclick="filterFAQ('products')" class="faq-category bg-[#0f0f23] border border-[#ffd700]/20 text-[#c0c0c0] px-6 py-2 rounded-full hover:border-[#40e0d0] transition-colors">Products</button>
+                <button onclick="filterFAQ('shipping')" class="faq-category bg-[#0f0f23] border border-[#ffd700]/20 text-[#c0c0c0] px-6 py-2 rounded-full hover:border-[#40e0d0] transition-colors">Shipping</button>
+                <button onclick="filterFAQ('returns')" class="faq-category bg-[#0f0f23] border border-[#ffd700]/20 text-[#c0c0c0] px-6 py-2 rounded-full hover:border-[#40e0d0] transition-colors">Returns</button>
+                <button onclick="filterFAQ('orders')" class="faq-category bg-[#0f0f23] border border-[#ffd700]/20 text-[#c0c0c0] px-6 py-2 rounded-full hover:border-[#40e0d0] transition-colors">Orders</button>
+            </div>
+
+            <!-- FAQ Accordion -->
+            <div class="space-y-4" id="faq-accordion">
+                <!-- Products FAQs -->
+                <div class="faq-item bg-[#0f0f23]/50 border border-[#ffd700]/20 rounded-lg" data-category="products">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-[#ffd700]">What makes Al Qamar perfumes unique?</h3>
+                            <span class="text-[#40e0d0] text-xl faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-[#c0c0c0]">Al Qamar perfumes are inspired by lunar phases and desert mysticism. Each fragrance is crafted with rare Arabian ingredients like oud wood, saffron, and amber, blended by master perfumers to create olfactory journeys that evoke the mystery of the moon and the serenity of desert oases.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-[#0f0f23]/50 border border-[#ffd700]/20 rounded-lg" data-category="products">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-[#ffd700]">How long do your fragrances last?</h3>
+                            <span class="text-[#40e0d0] text-xl faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-[#c0c0c0]">Our EDP (Eau de Parfum) fragrances typically last 8-12 hours on the skin, depending on your skin type, climate, and application method. For longer-lasting wear, apply to pulse points and moisturize your skin beforehand.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-[#0f0f23]/50 border border-[#ffd700]/20 rounded-lg" data-category="products">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-[#ffd700]">Are your products cruelty-free and vegan?</h3>
+                            <span class="text-[#40e0d0] text-xl faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-[#c0c0c0]">Yes, all Al Qamar perfumes are cruelty-free and most are vegan. We never test on animals and use plant-based alternatives wherever possible. Some fragrances contain ethically sourced animal-derived ingredients like ambergris or musk, which are clearly labeled.</p>
+                    </div>
+                </div>
+
+                <!-- Shipping FAQs -->
+                <div class="faq-item bg-[#0f0f23]/50 border border-[#ffd700]/20 rounded-lg" data-category="shipping">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-[#ffd700]">Do you offer free shipping?</h3>
+                            <span class="text-[#40e0d0] text-xl faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-[#c0c0c0]">Yes! We offer free standard shipping on all orders over Rs. 75 within the continental United States. Orders under Rs. 75 have a flat shipping rate of Rs. 9.99. International shipping rates vary by location and are calculated at checkout.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-[#0f0f23]/50 border border-[#ffd700]/20 rounded-lg" data-category="shipping">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-[#ffd700]">How long does shipping take?</h3>
+                            <span class="text-[#40e0d0] text-xl faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-[#c0c0c0]">Standard shipping within the US typically takes 3-5 business days. Express shipping (2-3 business days) and overnight shipping are also available. International orders may take 7-14 business days depending on customs processing.</p>
+                    </div>
+                </div>
+
+                <!-- Returns FAQs -->
+                <div class="faq-item bg-[#0f0f23]/50 border border-[#ffd700]/20 rounded-lg" data-category="returns">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-[#ffd700]">What is your return policy?</h3>
+                            <span class="text-[#40e0d0] text-xl faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-[#c0c0c0]">We offer a 30-day return policy for unopened, unused products in their original packaging. Custom or personalized orders are not eligible for returns. Return shipping costs are the customer's responsibility unless the item is defective.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-[#0f0f23]/50 border border-[#ffd700]/20 rounded-lg" data-category="returns">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-[#ffd700]">How do I initiate a return?</h3>
+                            <span class="text-[#40e0d0] text-xl faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-[#c0c0c0]">Contact our customer service team at returns@alqamarperfumes.com with your order number and reason for return. We'll provide a return authorization and shipping label. Once we receive your return, refunds are processed within 5-7 business days.</p>
+                    </div>
+                </div>
+
+                <!-- Orders FAQs -->
+                <div class="faq-item bg-[#0f0f23]/50 border border-[#ffd700]/20 rounded-lg" data-category="orders">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-[#ffd700]">How do I track my order?</h3>
+                            <span class="text-[#40e0d0] text-xl faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-[#c0c0c0]">Once your order ships, you'll receive a tracking number via email. You can also track your order on our website by entering your order number and email address on the Track Order page.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-[#0f0f23]/50 border border-[#ffd700]/20 rounded-lg" data-category="orders">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-[#ffd700]">Can I modify or cancel my order?</h3>
+                            <span class="text-[#40e0d0] text-xl faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-[#c0c0c0]">Orders can be modified or cancelled within 2 hours of placement. After that, if the order has entered processing, we may not be able to make changes. Contact us immediately at orders@alqamarperfumes.com if you need to make changes.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-[#0f0f23]/50 border border-[#ffd700]/20 rounded-lg" data-category="orders">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-[#ffd700]">What payment methods do you accept?</h3>
+                            <span class="text-[#40e0d0] text-xl faq-icon">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-[#c0c0c0]">We accept all major credit cards (Visa, MasterCard, American Express), PayPal, Apple Pay, and Google Pay. All transactions are secured with SSL encryption.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Still Need Help -->
+            <div class="mt-16 text-center">
+                <h3 class="text-2xl font-['Crimson_Text'] font-bold text-[#ffd700] mb-4">Still Need Help?</h3>
+                <p class="text-[#c0c0c0] mb-6">
+                    Can't find the answer you're looking for? Our fragrance experts are here to help.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="bg-[#ffd700] text-[#0f0f23] px-6 py-3 rounded-full font-semibold hover:bg-[#ffd700]/80 transition-colors">
+                        Contact Us
+                    </a>
+                    <a href="track-order.html" class="bg-[#0f0f23] border border-[#ffd700]/20 text-[#c0c0c0] px-6 py-3 rounded-full font-semibold hover:border-[#40e0d0] transition-colors">
+                        Track Order
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (identical across Home, Shop, About, Contact) -->
+    <footer class="theme-footer site-footer py-12">
+        <div class="footer-inner container mx-auto px-4">
+                <div class="footer-column footer-brand">
+                    <div class="brand-column">
+                      <img src="../perfume images/logo image.jpg" 
+                           alt="Al Qamar Perfumes" 
+                           class="footer-logo"
+                           loading="lazy" decoding="async"
+                           style="
+                             width: 65px; height: 65px; object-fit: cover;
+                             border-radius: 50%; border: 3px solid var(--accent-color);
+                             transition: all 0.3s ease;
+                           "
+                           onerror="this.style.background='linear-gradient(135deg,var(--accent-color),#00B8B0);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;color:white;font-weight:bold'">
+                      <div>
+                        <h3 style="color: var(--accent-color);">Mohammad Al Qamar Perfumes</h3>
+                        <p>Lunar Arabian Luxury</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="footer-column footer-links">
+                    <h5 class="font-semibold theme-text mb-4">Quick Links</h5>
+                    <ul class="space-y-2 theme-text-secondary">
+                        <li><a href="#home" class="footer-link">Home</a></li>
+                        <li><a href="shop.html" class="footer-link">Shop</a></li>
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="policies.html" class="footer-link">Policies</a></li>
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-service">
+                    <h5 class="font-semibold theme-text mb-4">Customer Service</h5>
+                    <ul class="space-y-2 theme-text-secondary">
+                        <li><a href="track-order.html" class="footer-link">Track Order</a></li>
+                        <li><a href="#" class="footer-link">Returns</a></li>
+                        <li><a href="#" class="footer-link">Shipping</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-connect">
+                    <h4 style="margin-bottom: 16px; color: var(--text-primary);">Connect</h4>
+                    <div class="social-icons header-social-icons" aria-label="Social links">
+                        <a href="https://www.instagram.com/mq.perfumes" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.2" stroke="currentColor" stroke-width="1.7"></rect>
+                                <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"></circle>
+                                <circle cx="17.35" cy="6.65" r="1.05" fill="currentColor"></circle>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/918097817540" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@mqperfumes" target="_blank" rel="noopener noreferrer" class="header-social-icon" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+                            </svg>
+                        </a>
+                        <a href="mailto:perfumesmq1@gmail.com" class="header-social-icon" aria-label="Email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                        <a href="tel:+918097817540" class="header-social-icon" aria-label="Phone">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            <div class="footer-bottom border-t theme-border mt-8 pt-8 text-center theme-text-secondary">
+                <p>&copy; 2024 Al Qamar Perfumes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/cart.js"></script>
+    <script>
+        // Initialize basic functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check auth status
+            if (typeof authManager !== 'undefined') {
+                authManager.checkExistingSession();
+            }
+
+            // Load cart
+            if (typeof cartManager !== 'undefined') {
+                cartManager.loadCart();
+                cartManager.updateCartCount();
+            }
+
+            // FAQ search functionality
+            const faqSearch = document.getElementById('faq-search');
+            if (faqSearch) {
+                faqSearch.addEventListener('input', function() {
+                    searchFAQ(this.value);
+                });
+            }
+
+            // GSAP animations
+            try { gsap.registerPlugin(ScrollTrigger); } catch(e) {}
+        });
+
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon');
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.textContent = '−';
+                gsap.from(content, {
+                    opacity: 0,
+                    height: 0,
+                    duration: 0.3
+                });
+            } else {
+                gsap.to(content, {
+                    opacity: 0,
+                    height: 0,
+                    duration: 0.3,
+                    onComplete: () => {
+                        content.classList.add('hidden');
+                        icon.textContent = '+';
+                    }
+                });
+            }
+        }
+
+        function filterFAQ(category) {
+            const faqItems = document.querySelectorAll('.faq-item');
+            const categoryButtons = document.querySelectorAll('.faq-category');
+
+            // Update button styles
+            categoryButtons.forEach(btn => {
+                if (btn.textContent.toLowerCase() === category) {
+                    btn.classList.remove('bg-[#0f0f23]', 'border-[#ffd700]/20', 'text-[#c0c0c0]', 'bg-yellow-500', 'text-black', 'border');
+                    btn.classList.add('bg-yellow-500', 'text-black');
+                } else {
+                    btn.classList.remove('bg-yellow-500', 'text-black');
+                    btn.classList.add('bg-[#0f0f23]', 'border', 'border-[#ffd700]/20', 'text-[#c0c0c0]');
+                }
+            });
+
+            // Filter FAQ items
+            faqItems.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                    gsap.from(item, {
+                        opacity: 0,
+                        y: 20,
+                        duration: 0.3
+                    });
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function searchFAQ(query) {
+            const faqItems = document.querySelectorAll('.faq-item');
+            const searchTerm = query.toLowerCase();
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('h3').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-content').textContent.toLowerCase();
+
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

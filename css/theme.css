@@ -1,0 +1,180 @@
+/* Theme system - dark theme only
+   Provides CSS variables for theming.
+   No hardcoded colors for themed elements — uses variables only.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.arabic-font {
+  font-family: 'Amiri', serif;
+}
+
+/* header accent depends on active theme */
+.header-accent {
+  color: var(--header-accent, var(--accent-turquoise)) !important;
+}
+
+.header-link {
+  color: var(--text-primary) !important;
+}
+.header-link:hover {
+  color: var(--header-accent, var(--accent-turquoise)) !important;
+}
+
+/* Theme header buttons: apply aqua accent to auth and cart count */
+/* header button colors follow the header button variable which is theme-aware */
+#auth-btn {
+  background-color: var(--header-button-bg, var(--accent-turquoise)) !important;
+  color: var(--text-inverse) !important;
+  border: 1px solid rgba(0,0,0,0.06) !important;
+}
+#cart-count {
+  background-color: var(--header-button-bg, var(--accent-turquoise)) !important;
+  color: var(--text-inverse) !important;
+}
+
+/* Global transitions (300ms) */
+*, *::before, *::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+html, body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme variables - dark (default) */
+:root, :root[data-theme="dark"] {
+  --bg-hover: rgba(255, 215, 0, 0.1);
+  --bg-input: #0f0f23;
+  --bg-modal: #0f0f23;
+
+  --text-primary: #ffffff;
+  --text-secondary: #c0c0c0;
+  --text-muted: #888888;
+  --text-inverse: #0f0f23;
+
+  --accent-gold: #ffd700;
+  --accent-gold-dark: #b8860b;
+  --accent-gold-light: #ffed4a;
+  --accent-turquoise: #f6c343;
+  --accent-turquoise-dark: #d6a634;
+
+  /* Social / icon system */
+  --icon-primary: #ffffff;
+  --icon-ring: rgba(255, 215, 0, 0.45);
+  --icon-bg: rgba(255, 255, 255, 0.04);
+
+  /* header-specific mappings for dark theme */
+  --header-accent: var(--accent-gold);
+  --header-button-bg: var(--accent-gold);
+
+  --border-color: rgba(255, 215, 0, 0.2);
+  --border-light: rgba(255, 255, 255, 0.1);
+
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+  --shadow-gold: 0 0 20px rgba(255,215,0,0.3);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.5);
+  --shadow-gold-hover: 0 0 30px rgba(255,215,0,0.5);
+
+  --bg-secondary: #1a1a2e;
+  --bg-marquee: #000000;
+  --bg-modal: #0f0f23;
+  --text-muted: #888888;
+  --text-inverse: #0f0f23;
+  --accent-gold-dark: #b8860b;
+  --accent-gold-light: #ffed4a;
+  --accent-turquoise-dark: #2eb8b0;
+  --border-dark: rgba(0,0,0,0.3);
+  --gradient-hero: linear-gradient(to bottom, #0f0f23, #1a1a2e, #0f0f23);
+  --overlay-bg: rgba(0,0,0,0.5);
+  --scrollbar-track: #0f0f23;
+  --scrollbar-thumb: #ffd700;
+  --scrollbar-thumb-hover: #40e0d0;
+  --header-bg: #0f0f23;
+  --footer-bg: #0f0f23;
+  --footer-accent: #40e0d0;
+  --link-hover: #40e0d0;
+  --social-icon-color: #FFD700;
+  --social-icon-hover: #FFA500;
+}
+
+/* Core element mapping using variables (keeps layout intact) */
+html, body {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+header, footer {
+  background-color: var(--bg-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+a {
+  color: var(--accent-turquoise) !important;
+}
+a:hover {
+  color: var(--accent-gold) !important;
+}
+//* Buttons — only explicitly themed button classes; .rounded-full removed (border-radius utility, not a button class) */
+.btn, .btn-glow {
+  background-color: var(--accent-gold) !important;
+  color: var(--text-inverse) !important;
+  border: 1px solid var(--border-color) !important;
+}
+.btn-glow {
+  box-shadow: var(--shadow-gold) !important;
+}
+
+/* Inputs, selects, textareas */
+input, select, textarea {
+  background-color: var(--bg-input) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* Cards and panels */
+.product-card, .category-card, .card, .bg-card, .rounded-lg {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+/* Filters, modals, overlays */
+.bg-\[\#0f0f23\]\/50, .bg-card-overlay, .modal, .overlay, .bg-tertiary {
+  background-color: var(--bg-tertiary) !important;
+}
+
+/* Pagination / small controls */
+.pagination a, .page-link {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* Theme toggle button (exact ID used on pages) */
+#themeToggle {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.35rem 0.6rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Small accessibility focus styles */
+#themeToggle:focus, button:focus, input:focus, select:focus, textarea:focus {
+  outline: 3px solid rgba(64,224,208,0.18);
+  outline-offset: 2px;
+}
+
+/* Make sure images keep their visual treatments */
+.product-card img, .category-card img, img {
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  #themeToggle { padding: 0.4rem; font-size: 0.95rem; }
+}
